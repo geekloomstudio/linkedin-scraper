@@ -1,0 +1,24 @@
+version: "3.8"
+
+services:
+  linkedin_mongodb:
+    image: mongo:5.0
+    ports:
+      - 27017:27017
+    volumes:
+      - linkedin_mongodb:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=geekloom
+      - MONGO_INITDB_ROOT_PASSWORD=Geekloom@123
+    networks:
+      - geekloom-networks
+
+volumes:
+  linkedin_mongodb:
+
+
+networks:
+  geekloom-networks:
+    driver: bridge
+    name: geekloom-networks
+    external: true

@@ -1,0 +1,4 @@
+db_name=linkedin
+db_username=geekloom
+db_password=Geekloom@123
+db_host=127.0.0.1:27017
